@@ -1,0 +1,30 @@
+main {
+    min-height: calc(100vh - 70px);
+}
+
+html {
+    font-size: 14px !important;
+}
+
+th {
+    vertical-align: top;
+}
+
+td {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 0;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: rgba(0, 0, 0, .03);
+}
+
+.invalid-feedback ul, .invalid-feedback ol, .invalid-feedback dl {
+    margin-bottom: 0px;
+}
+
+.page-item:not(.disabled) a {
+    cursor: pointer;
+}

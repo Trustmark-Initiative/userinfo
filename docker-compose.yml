@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+
+    userinfo:
+        build: "."
+        restart:  "unless-stopped"
+        container_name: "userinfo"
+        ports:
+            - "8888:8080"
+        environment:
+            SPRING_BOOT_CONTEXT_PATH:     "/userinfo"
+            SPRING_SECURITY_CLIENT_ID:    "userinfo"
+            SPRING_SECURITY_REDIRECT_URI: "https://key.trustmarkinitiative.org/userinfo/login/oauth2/code/userinfo"
+            SPRING_SECURITY_ISSUER_URI:   "https://key.trustmarkinitiative.org/auth/realms/trustmark"
+
